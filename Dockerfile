@@ -27,6 +27,9 @@ RUN apt-get -y install \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /tmp/* \
     && rm -rf /var/tmp/*
+#Install Canon Drivers
+RUN dpkg -i cnrdrvcups-ufr2-us_5.70-1.11_arm64.deb
+RUN rpm -i cnrdrvcups-ufr2-us-5.70-1.11.aarch64.rpm
 
 # TODO: really needed?
 #COPY mime/ /etc/cups/mime/
